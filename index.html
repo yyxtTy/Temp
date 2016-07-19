@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript" src="js/jquery/jquery-1.10.2.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id="input1" value="点击"></input>
+	<input type="button" id="input2" value="点击"></input>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$("#input1").alertWhileClick();
+		$("#input2").aaa();
+	})
+	$.fn.aaa = function(){
+		alert("aaaccc");
+	}
+	$.fn.extend({          
+	    alertWhileClick:function() {            
+	          $(this).click(function(){                 
+	                 alert($(this).val() + "kkk" );           
+	           });           
+	     }       
+	});  
+	$("#input2").click()   
+</script>
+</html>
